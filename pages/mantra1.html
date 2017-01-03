@@ -1,25 +1,22 @@
-﻿<!DOCTYPE html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+﻿<!-- header START -->
+<script>
+    $.ajax({
+        url: 'header.html'
+    }).done(function( html ) {
+        $( "#page" ).append( html );
+    }).fail(function () {
+        $("#page").append("###");
+    });
+</script>
+<!-- header END-->
+<!-- page content START-->
 
-    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
-    <link rel="stylesheet" href="css/default.css"/>
+<div data-role="page" id="page">
+    <div data-role="header">
+        <p style="text-align:center;"><strong>Шри Ишопанишад</strong></p>
+    </div>
 
-    <script src="js/jquery-2.2.4.min.js"></script>
-    <script src="js/jquery.mobile-1.4.5.min.js"></script>
-    <script src="js/winstore-jscompat.js"></script> <!-- 1st jQuery, 2nd jquery Mobile, 3rd winstore-jscompat.js-->
-    <!-- AJAX, JSON calls https://timcodes.wordpress.com/2013/09/17/windows-phone-8-local-ajax-json-calls/ -->
-
-  <title>Шри Ишопанишад</title>
-
-</head>
-<body>
-    <div data-role="page" id="page">
-        <!-- <div data-role="header">
-            <p style="text-align:center;"><strong>Шри Ишопанишад</strong></p>
-        </div> -->
-
+<h1><a href="../index.html">go to main page</a></h1>
         <div data-role="content">
             <!-- START news block -->
             <script>
@@ -80,7 +77,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="pages/mantra1.html">
+                    <a href="mantra1.html">
                         <p>ишавасйам идам сарвам</p>
                         <p>Все живое и неживое во вселенной находится во власти Господа и принадлежит Ему. Поэтому каждый должен пользоваться только тем, что ему необходимо и выделено ему как его доля, и не посягать ни на что другое, хорошо понимая, кому все принадлежит.</p>
                         <p class="ui-li-aside"><strong>Мантра 1</strong></p>
@@ -208,11 +205,11 @@
             </ul>
             <!-- Nav END-->
         </div>
-
+<!-- page content END-->
 <!-- footer START -->
         <script>
                 $.ajax({
-                    url: 'footer.html'
+                    url: '../footer.html'
                 }).done(function( html ) {
                     $( "#page" ).append( html );
                 }).fail(function () {
@@ -225,3 +222,4 @@
 </body>
 
 </html>
+
