@@ -1,7 +1,21 @@
-﻿<!-- page content START-->
+﻿<script>
+    //TODO: navigation
+    var page = document.getElementById("page");
+    var thisPage = page.getAttribute("data-page");
+    function next(){
+        console.log("page: "+page);
+        console.log("thisPage: "+thisPage);
+
+        var nextPage = thisPage++;
+        console.log("nextPage: "+thisPage);
+        return "mantra" +nextPage+ ".html";
+    }
+</script>
+
+<!-- page content START-->
 <div data-role="page" id="page" data-mantra-number="1">
     <div data-role="header">
-        <p style="text-align:center;"><strong>Шри Ишопанишад</strong></p>
+        <p style="text-align:center;"><strong>Шри Ишопанишад</strong> <a href="#" onclick="next();">---></a></p>
     </div>
     <div data-role="content">
         <a href="../index.html">go to main page</a>
