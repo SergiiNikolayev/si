@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/default.css"/>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/winstore-jscompat.js"></script> <!-- 1st jQuery, 2nd jquery Mobile, 3rd winstore-jscompat.js-->
+    <!-- AJAX, JSON calls https://timcodes.wordpress.com/2013/09/17/windows-phone-8-local-ajax-json-calls/ -->
+
+  <title>Шри Ишопанишад</title
+
+</head>
+<body>
+    <div data-role="page">
+        <!-- <div data-role="header">
+            <p style="text-align:center;"><strong>Шри Ишопанишад</strong></p>
+        </div> -->
+
+        <div data-role="content">
+            <!-- START news block -->
+            <script>
+                /** working AJAX*/
+                $(document).ready(function () {
+                    $.ajax({
+                        url: "https://raw.githubusercontent.com/SergiiNikolayev/news-for-app/master/news.html"
+                    }).done(function( html ) {
+                        $( "#news" ).append( html );
+                    })
+                    .fail(function () {
+                        $("#news").append("###");
+                    });
+                });
+            </script>
+            <div id="news" style="height:12px;overflow:hidden;"></div>
+             <!-- END news block -->
+
+            <!-- START isopanisad-only-news block -->
+            
+            <script>
+                /** working AJAX*/
+                $(document).ready(function () {
+                    $.ajax({
+                        url: "https://raw.githubusercontent.com/SergiiNikolayev/news-for-app/master/news-si.html"
+                    }).done(function( html ) {
+                        $( "#news-si" ).append( html );
+                    })
+                    .fail(function () {
+                        $("span.ui-li-count").append("no news right now, bro");
+                    });
+                });
+            </script>
+
+            <div id="news-si" style="overflow:hidden;" data-book="2"></div>
+            <!-- END isopanisad-only-news block -->
+
+
+            <!-- Nav START-->
+
+            <form class="ui-filterable">
+                <input id="autocomplete-input" data-type="search" placeholder="Search fruits...">
+            </form>
+
+            <ul class="wrap" data-role="listview" data-inset="true" data-filter="true"  data-input="#autocomplete-input">
+                <li data-role="list-divider">Шри Ишопанишад<span class="ui-li-count"></span></li>
+                <li>
+                    <a href="iso-introduction.html">
+                        <p>&nbsp;</p>
+                        <p class="ui-li-aside"><strong>Введение</strong></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="iso-invocation.html">
+                        <p>ом пӯрнам адам пӯрнам идам</p>
+                        <p>Верховный Господь, Личность Бога, всесовершенен, и, так как Он абсолютен и совершенен, все, что исходит из Него, в частности этот проявленный мир, наделено всем необходимым, поскольку само является полным целым. Все, что исходит из Полного Целого, также обладает полнотой. И, как Полное Целое, Он пребывает в совершенном равновесии, несмотря на то что из Него исходит такое множество законченных частей.</p>
+                        <p class="ui-li-aside"><strong>Обращение</strong></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="mantra1.html">
+                        <p>ишавасйам идам сарвам</p>
+                        <p>Все живое и неживое во вселенной находится во власти Господа и принадлежит Ему. Поэтому каждый должен пользоваться только тем, что ему необходимо и выделено ему как его доля, и не посягать ни на что другое, хорошо понимая, кому все принадлежит.</p>
+                        <p class="ui-li-aside"><strong>Мантра 1</strong></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="mantra2.htmll">
+                        <p>курванн эвеха кармани</p>
+                        <p>Придерживаясь такого образа действий, человек может надеяться прожить сотни лет, ибо такая деятельность не связывает его законами кармы. Иного пути для человека нет.</p>
+                        <p class="ui-li-aside"><strong>Мантра 2</strong></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="mantra3.htmll">
+                        <p>асурйа нама те лока</p>
+                        <p>Убийце души, кем бы он ни был, уготованы планеты, известные как миры безверия, погруженные в темноту и невежество.</p>
+                        <p class="ui-li-aside"><strong>Мантра 3</strong></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="mantra4.htmll">
+                        <p>анеджад экам манасо джавӣйо</p>
+                        <p>Оставаясь в Своей обители, Верховный Господь, Личность Бога, передвигается быстрее мысли и может обогнать всех бегущих. Даже могущественные полубоги не способны приблизиться к Нему. Оставаясь на одном месте, Он в то же время повелевает теми, кто посылает ветра и дожди. В Своем совершенстве Он не знает Себе равных.</p>
+                        <p class="ui-li-aside"><strong>Мантра 4</strong></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="mantra5.htmll">
+                        <p>тад эджати тан наиджати</p>
+                        <p>Верховный Господь и ходит, и не ходит. Он далеко и в то же время очень близко. Он пребывает внутри всего, и все же Он вне всего.</p>
+                        <p class="ui-li-aside"><strong>Мантра 5</strong></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="mantra6.htmll">
+                        <p>йас ту сарвани бхӯтанй</p>
+                        <p>Тот, кто видит все связанным с Верховным Господом, кто смотрит на все существа как на Его неотъемлемые частицы и ощущает присутствие Верховного Господа во всем сущем, никогда не питает ненависти к кому-либо или чему-либо.</p>
+                        <p class="ui-li-aside"><strong>Мантра 6</strong></p>
+                    </a>
+                </li>
+
+
+                <li data-role="list-divider">Thursday, October 7, 2010 <span class="ui-li-count">1</span></li>
+                <li>
+                    <a href="index.html">
+                        <h2>Avery Walker</h2>
+                        <p><strong>Re: Dinner Tonight</strong></p>
+                        <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait!</p>
+                        <p class="ui-li-aside"><strong>4:48</strong>PM</p>
+                    </a>
+                </li>
+            </ul>
+            <!-- Nav END-->
+
+
+
+            <a href="glava1/glava1.html" class="ui-btn  ui-mini ui-corner-all">1 | Обзор армий на поле битвы Курукшетра</a>
+            <a href="glava2/glava2.html" class="ui-btn  ui-mini ui-corner-all">2 | Краткое изложение "Бхагавад-гиты"</a>
+            <a href="glava3/glava3.html" class="ui-btn  ui-mini ui-corner-all">3 | Карма-йога</a>
+            <a href="glava4/glava4.html" class="ui-btn  ui-mini ui-corner-all">4 | Божественное знание</a>
+            <a href="glava5/glava5.html" class="ui-btn  ui-mini ui-corner-all">5 | Карма-йога - деятельность в сознании Кришны</a>
+            <a href="glava6/glava6.html" class="ui-btn  ui-mini ui-corner-all">6 | Дхьяна-йога</a>
+            <a href="glava7.html" class="ui-btn  ui-mini ui-corner-all">7 | Знание Абсолюта</a>
+            <a href="glava8.html" class="ui-btn  ui-mini ui-corner-all">8 | Достижение обители Всевышнего</a>
+            <a href="glava9.html" class="ui-btn  ui-mini ui-corner-all">9 | Самое сокровенное знание</a>
+            <a href="glava10.html" class="ui-btn  ui-mini ui-corner-all">10 | Великолепие Абсолюта</a>
+            <a href="glava11.html" class="ui-btn  ui-mini ui-corner-all">11 | Вселенская форма</a>
+            <a href="glava12.html" class="ui-btn  ui-mini ui-corner-all">12 | Преданное служение</a>
+            <a href="glava13.html" class="ui-btn  ui-mini ui-corner-all">13 | Природа, наслаждающийся и сознание</a>
+            <a href="glava14.html" class="ui-btn  ui-mini ui-corner-all">14 | Три гуны материальной природы</a>
+            <a href="glava15.html" class="ui-btn  ui-mini ui-corner-all">15 | Пурушоттама-йога, йога Высшей Личности</a>
+            <a href="glava16.html" class="ui-btn  ui-mini ui-corner-all">16 | Божественные и демонические натуры</a>
+            <a href="glava17/glava17.html"  rel="external" class="ui-btn  ui-mini ui-corner-all">17 | Разновидности веры</a>
+            <a href="glava18/glava18.html"  rel="external" class="ui-btn  ui-mini ui-corner-all">18 | Совершенство отречения</a>
+        </div>
+
+        <div data-role="footer" data-position="fixed"><h6>Его Божественная Милость<br> А.Ч. Бхактиведанта Свами Шрила Прабхупада</h6></div>
+    </div>
+</body>
+
+</html>
