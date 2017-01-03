@@ -22,14 +22,19 @@
     src: url('gt-webfont.woff2');
 }
 
-.sans, .word, i{
+.sans, .word, i, .main-sans{
     font-family: gtitalic;
+}
+
+.ui-listview > li p.main-sans{
+    font-size: 1em;
 }
 
 .sans{
     text-align: center;
-    font-family: gtbreg;
+    font-family: gtitalic;
     font-size: 1.5em;
+    font-weight: bold;
 }
 
 .tran{
