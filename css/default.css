@@ -1,7 +1,37 @@
-﻿body {
-
+﻿#news, #news-si{
+    height:12px;
+    overflow:hidden;
+    font-size: 10px;
 }
 
-.wrap p{
-   /* background-color: orangered; */ 
+
+@font-face {
+    font-family: gtbold;
+    src: url('gtb.woff');
+}
+@font-face {
+    font-family: gtitalic;
+    src: url('gti.woff');
+}
+@font-face {
+    font-family: gtbreg;
+    src: url('gtr.woff');
+}
+@font-face {
+    font-family: GaurangaTimes;
+    src: url('gt-webfont.woff2');
+}
+
+.sans, .word, i{
+    font-family: gtitalic;
+}
+
+.sans{
+    text-align: center;
+    font-family: gtbreg;
+    font-size: 1.5em;
+}
+
+.tran{
+    font-weight: bold;
 }

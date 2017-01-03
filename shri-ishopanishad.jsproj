@@ -48,9 +48,13 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="css\gtb.woff" />
+    <Content Include="css\gti.woff" />
+    <Content Include="css\gtr.woff" />
     <Content Include="css\jquery.mobile-1.4.5.min.css" />
     <Content Include="default.html" />
     <Content Include="footer.html" />
+    <Content Include="header.html" />
     <Content Include="images\ajax-loader.gif" />
     <Content Include="images\icons-png\action-black.png" />
     <Content Include="images\icons-png\action-white.png" />

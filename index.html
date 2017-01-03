@@ -21,42 +21,10 @@
         </div> -->
 
         <div data-role="content">
-            <!-- START news block -->
-            <script>
-                /** working AJAX*/
-                $(document).ready(function () {
-                    $.ajax({
-                        url: "https://raw.githubusercontent.com/SergiiNikolayev/news-for-app/master/news.html"
-                    }).done(function( html ) {
-                        $( "#news" ).append( html );
-                    })
-                    .fail(function () {
-                        $("#news").append("###");
-                    });
-                });
-            </script>
-            <div id="news" style="height:12px;overflow:hidden;"></div>
-             <!-- END news block -->
 
-            <!-- START isopanisad-only-news block -->
-            
-            <script>
-                /** working AJAX*/
-                $(document).ready(function () {
-                    $.ajax({
-                        url: "https://raw.githubusercontent.com/SergiiNikolayev/news-for-app/master/news-si.html"
-                    }).done(function( html ) {
-                        $( "#news-si" ).append( html );
-                    })
-                    .fail(function () {
-                        $("span.ui-li-count").append("no news right now, bro");
-                    });
-                });
-            </script>
 
-            <div id="news-si" style="overflow:hidden;" data-book="2"></div>
-            <!-- END isopanisad-only-news block -->
-
+            <div id="news"></div>
+            <div id="news-si" data-book="2"></div>
 
             <!-- Nav START-->
 
@@ -207,21 +175,52 @@
                 </li>
             </ul>
             <!-- Nav END-->
-        </div>
-
-<!-- footer START -->
-        <script>
-                $.ajax({
-                    url: 'footer.html'
-                }).done(function( html ) {
-                    $( "#page" ).append( html );
-                }).fail(function () {
-                    $("#page").append("###");
-                });
-        </script>
-<!-- footer END-->
 
     </div>
 </body>
+
+<!-- START news block -->
+<script>
+    /** working AJAX*/
+    $(document).ready(function () {
+        $.ajax({
+            url: "https://raw.githubusercontent.com/SergiiNikolayev/news-for-app/master/news.html"
+        }).done(function( html ) {
+            $( "#news" ).append( html );
+        })
+                .fail(function () {
+                    $("#news").append("###");
+                });
+    });
+</script>
+<!-- END news block -->
+
+<!-- START isopanisad-only-news block -->
+<script>
+    /** working AJAX*/
+    $(document).ready(function () {
+        $.ajax({
+            url: "https://raw.githubusercontent.com/SergiiNikolayev/news-for-app/master/news-si.html"
+        }).done(function( html ) {
+            $( "#news-si" ).append( html );
+        })
+                .fail(function () {
+                    $("span.ui-li-count").append(".");
+                });
+    });
+</script>
+<!-- END isopanisad-only-news block -->
+
+<!-- footer START -->
+<script>
+    $.ajax({
+        url: 'footer.html'
+    }).done(function( html ) {
+        $( "#page" ).append( html );
+    }).fail(function () {
+        $("#page").append("###");
+    });
+</script>
+<!-- footer END-->
 
 </html>
