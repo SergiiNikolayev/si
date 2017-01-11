@@ -40,3 +40,6 @@
 .tran{
     font-weight: bold;
 }
+.hide{
+    display: none;
+}
