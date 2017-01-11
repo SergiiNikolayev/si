@@ -43,3 +43,6 @@
 .hide{
     display: none;
 }
+.tran p, .purport p{
+    text-align: justify;
+}
