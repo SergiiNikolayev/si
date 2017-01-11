@@ -30,7 +30,7 @@
     font-size: 1em;
 }
 
-.sans{
+.sans, h1{
     text-align: center;
     font-family: gtitalic;
     font-size: 1.5em;

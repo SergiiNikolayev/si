@@ -53,8 +53,6 @@
     <Content Include="css\gtr.woff" />
     <Content Include="css\jquery.mobile-1.4.5.min.css" />
     <Content Include="default.html" />
-    <Content Include="footer.html" />
-    <Content Include="header.html" />
     <Content Include="images\ajax-loader.gif" />
     <Content Include="images\icons-png\action-black.png" />
     <Content Include="images\icons-png\action-white.png" />
@@ -271,6 +269,7 @@
     <Content Include="js\jquery-2.2.4.min.js" />
     <Content Include="js\jquery.mobile-1.4.5.min.js" />
     <Content Include="js\winstore-jscompat.js" />
+    <Content Include="pages\footer.html" />
     <Content Include="pages\header.html" />
     <Content Include="pages\mantra1.html" />
   </ItemGroup>

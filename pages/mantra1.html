@@ -1,24 +1,17 @@
-﻿<script>
-    //TODO: navigation
-    var page = document.getElementById("page");
-    var thisPage = page.getAttribute("data-page");
-    function next(){
-        console.log("page: "+page);
-        console.log("thisPage: "+thisPage);
-
-        var nextPage = thisPage++;
-        console.log("nextPage: "+thisPage);
-        return "mantra" +nextPage+ ".html";
-    }
-</script>
-
+﻿
 <!-- page content START-->
 <div data-role="page" id="page" data-mantra-number="1">
-    <div data-role="header">
-        <p style="text-align:center;"><a href="iso-invocation.html" onclick="next();"><---</a><strong>Шри Ишопанишад</strong> <a href="mantra2.html" onclick="next();">---></a></p>
+    <div data-role="header" data-position="fixed">
+        <span style="text-align:center;">
+            <a href="../index.html" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+            <a href="iso-invocation.html" class="ui-btn ui-icon-carat-l ui-btn-icon-left">Back</a>
+            <span>Шри Ишопанишад</span>
+            <a href="mantra2.html" class="ui-btn ui-icon-carat-r ui-btn-icon-right">Next</a>
+        </span>
     </div>
     <div data-role="content">
-        <a href="../index.html">go to main page</a>
+        <h1>Мантра <span id="mn">1</span></h1>
+        <hr />
         <div class="sans">
                 ӣвсйам ида сарва <br>
                 йат кича джагатй джагат <br>
@@ -49,7 +42,7 @@
     }).done(function( html ) {
         $( "#page" ).append( html );
     }).fail(function () {
-        $("#page").append("###");
+        $("#page").append("Prabhupada!");
     });
 </script>
 <!-- header END-->
@@ -61,9 +54,22 @@
     }).done(function( html ) {
         $( "#page" ).append( html );
     }).fail(function () {
-        $("#page").append("###");
+        $("#page").append("Prabhupada!");
     });
 </script>
 <!-- footer END-->
+<script>
+/*
+//not working!
+/!** this function read page number and put it in span near mantra number*!/
+    (function(){
+        var page = document.getElementById('page');
+        console.log(page.dataset.mantraNumber);
+        var mn = document.getElementById('mn');
+        mn.innerHTML = page.dataset.mantraNumber;
+    })();
+
+*/
+</script>
 </html>
 
