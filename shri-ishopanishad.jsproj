@@ -271,6 +271,7 @@
     <Content Include="js\winstore-jscompat.js" />
     <Content Include="pages\footer.html" />
     <Content Include="pages\header.html" />
+    <Content Include="pages\iso-introduction.html" />
     <Content Include="pages\iso-invocation.html" />
     <Content Include="pages\mantra1.html" />
   </ItemGroup>
