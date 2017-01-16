@@ -274,11 +274,18 @@
     <Content Include="pages\iso-introduction.html" />
     <Content Include="pages\iso-invocation.html" />
     <Content Include="pages\mantra1.html" />
+    <Content Include="pages\mantra10.html" />
+    <Content Include="pages\mantra11.html" />
+    <Content Include="pages\mantra12.html" />
+    <Content Include="pages\mantra13.html" />
     <Content Include="pages\mantra2.html" />
     <Content Include="pages\mantra3.html" />
     <Content Include="pages\mantra4.html" />
     <Content Include="pages\mantra5.html" />
     <Content Include="pages\mantra6.html" />
+    <Content Include="pages\mantra7.html" />
+    <Content Include="pages\mantra8.html" />
+    <Content Include="pages\mantra9.html" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="Microsoft.Phone.WinJS.2.1, Version=1.0" />
