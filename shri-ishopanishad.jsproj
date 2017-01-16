@@ -278,6 +278,11 @@
     <Content Include="pages\mantra11.html" />
     <Content Include="pages\mantra12.html" />
     <Content Include="pages\mantra13.html" />
+    <Content Include="pages\mantra14.html" />
+    <Content Include="pages\mantra15.html" />
+    <Content Include="pages\mantra16.html" />
+    <Content Include="pages\mantra17.html" />
+    <Content Include="pages\mantra18.html" />
     <Content Include="pages\mantra2.html" />
     <Content Include="pages\mantra3.html" />
     <Content Include="pages\mantra4.html" />
